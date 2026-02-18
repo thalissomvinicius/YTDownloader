@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lista de instâncias da API Cobalt (Oficiais e da Comunidade)
     // Ordenadas por estabilidade. O script tenta uma por uma até conseguir.
     const API_INSTANCES = [
-        'https://co.wuk.sh/api',
         'https://cobalt.chip.lol/api',
         'https://dl.lp1.eu/api',
         'https://api.cobalt.adryd.com/api',

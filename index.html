@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixar Vídeos e Músicas do YouTube - Grátis</title>
+    <meta name="description" content="Baixe vídeos e músicas do YouTube gratuitamente com alta qualidade. Simples, rápido e fácil de usar no celular.">
+    <meta name="theme-color" content="#0b0b12">
+    <meta property="og:title" content="YT Downloader - Baixe Vídeos e Músicas">
+    <meta property="og:description" content="Baixe vídeos e áudios do YouTube com um toque. Rápido, grátis e sem anúncios.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔻</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-brands fa-youtube"></i>
+                <h1>YT Downloader</h1>
+            </div>
+            <div class="badge">100% grátis • Sem anúncios</div>
+            <p>Baixe vídeos e áudios do YouTube com um toque.</p>
+            <div class="feature-row">
+                <span><i class="fa-solid fa-bolt"></i> Rápido</span>
+                <span><i class="fa-solid fa-music"></i> MP3</span>
+                <span><i class="fa-solid fa-video"></i> MP4</span>
+                <span><i class="fa-solid fa-mobile-screen"></i> Mobile</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <input type="text" id="videoUrl" placeholder="Cole o link do YouTube aqui..." autocomplete="off">
+                <button id="pasteBtn" title="Colar Link"><i class="fa-regular fa-paste"></i></button>
+            </div>
+            <div class="input-hint">Dica: funciona com links curtos (youtu.be) e longos.</div>
+
+            <div class="options">
+                <div class="option-group">
+                    <label for="format">Formato:</label>
+                    <select id="format">
+                        <option value="auto">Vídeo (Auto)</option>
+                        <option value="mp3">Áudio (MP3)</option>
+                    </select>
+                </div>
+                <div class="option-group" id="qualityGroup">
+                    <label for="quality">Qualidade:</label>
+                    <select id="quality">
+                        <option value="max">Máxima</option>
+                        <option value="1080">1080p</option>
+                        <option value="720">720p</option>
+                        <option value="480">480p</option>
+                    </select>
+                </div>
+                <div class="option-group" id="bitrateGroup">
+                    <label for="bitrate">Bitrate:</label>
+                    <select id="bitrate">
+                        <option value="320">320 kbps</option>
+                        <option value="256">256 kbps</option>
+                        <option value="192">192 kbps</option>
+                        <option value="128">128 kbps</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="downloadBtn" class="download-btn">
+                <span>Baixar Agora</span>
+                <i class="fa-solid fa-download"></i>
+            </button>
+
+            <div id="status" class="status-message hidden"></div>
+            
+            <div id="result" class="result-container hidden">
+                <div class="video-info">
+                    <img id="thumb" src="" alt="Thumbnail">
+                    <div class="info-text">
+                        <h3 id="videoTitle">Título do Vídeo</h3>
+                        <p id="videoAuthor">Canal</p>
+                    </div>
+                </div>
+                <a id="downloadLink" href="#" target="_blank" class="action-btn">
+                    <i class="fa-solid fa-file-arrow-down"></i> Salvar Arquivo
+                </a>
+                <div id="downloadMeta" class="download-meta hidden">
+                    <div class="meta-row">
+                        <span id="fileSize">Tamanho: --</span>
+                        <span id="downloadSpeed">Velocidade: --</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+                </div>
+                <button id="downloadAnother" class="secondary-btn">Baixar Outro</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Desenvolvido para fins educacionais. Não hospedamos nenhum arquivo.</p>
+            <p>Desenvolvi isso para praticar UI/UX e facilitar downloads rápidos no mobile.</p>
+            <p class="signature">Vinicius Dev</p>
+            <div class="api-settings">
+                <small>API Server: <span id="apiStatus">Cobalt Official</span></small>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

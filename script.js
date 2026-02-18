@@ -19,15 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressFill = document.getElementById('progressFill');
     const downloadAnotherBtn = document.getElementById('downloadAnother');
 
-    // Lista de instâncias da API Cobalt (Oficiais e da Comunidade)
-    // Ordenadas por estabilidade. O script tenta uma por uma até conseguir.
     const API_INSTANCES = [
-        'https://cobalt.chip.lol/api',
-        'https://dl.lp1.eu/api',
-        'https://api.cobalt.adryd.com/api',
-        'https://cobalt.place/api',
-        'https://api.cobalt.kwiatekmiki.pl/api',
-        'https://api.cobalt.tools' // Oficial (pode ter rate limit)
+        '/api/cobalt'
     ];
 
     formatSelect.addEventListener('change', () => {
